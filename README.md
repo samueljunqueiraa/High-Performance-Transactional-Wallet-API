@@ -5,7 +5,7 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)
 ![Coverage](https://img.shields.io/badge/Coverage-90%25-brightgreen)
 
-## 📖 Visão Geral do Projeto
+##  Visão Geral do Projeto
 
 Este projeto implementa uma API RESTful de alta performance para transações financeiras (carteira digital), com foco obsessivo em **consistência ACID**, **controle de concorrência** e **idempotência**.
 
@@ -15,7 +15,7 @@ A arquitetura segue estritamente os princípios da **Arquitetura Hexagonal (Port
 
 ---
 
-## 🏗️ Design Arquitetural
+##  Design Arquitetural
 
 A aplicação foi desenhada utilizando um **Modelo de Domínio Rico**. A lógica *core* reside na camada de domínio e não possui dependências de frameworks (Spring) ou bibliotecas externas.
 
@@ -41,7 +41,7 @@ graph TD
     end
 ```
    
-## 🚀 Desafios de Engenharia & Soluções
+##  Desafios de Engenharia & Soluções
 
 ### 1. Concorrência & Race Conditions
 O Problema: Em um ambiente altamente concorrente, duas requisições para transferir dinheiro da mesma carteira podem chegar simultaneamente. Sem proteção, ambas poderiam ler o mesmo saldo inicial, resultando em "gasto duplo" e inconsistência financeira.
@@ -68,7 +68,7 @@ Testes de Integração (Testcontainers): Validam a interação com um banco Post
 
 Testes E2E (RestAssured): Testes caixa-preta dos endpoints da API, validando códigos de status HTTP, serialização JSON e tratamento de erros.
 
-## 🛠️ Stack Tecnológica
+##  Stack Tecnológica
 ### Linguagem: Java 21.
 ### Framework: Spring Boot 3.2.
 ### Banco de Dados: PostgreSQL 16.
